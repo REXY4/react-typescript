@@ -1,0 +1,26 @@
+.title-joblist {
+    font-size: 32px;
+  }
+  
+  .title-job {
+    font-size: 21px;
+    color: #3e54ac;
+  }
+  
+  .title-job:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  
+  .text-company {
+    opacity: 0.6;
+  }
+  
+  .time {
+    color: green;
+  }
+  
+  .city {
+    font-size: 21px;
+    opacity: 0.7;
+  }

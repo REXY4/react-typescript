@@ -1,0 +1,64 @@
+.card-form{
+    width: 50%;
+    padding : 40px;
+    border-radius: 20px;
+}
+
+
+.logo-form-input {
+    width: 100px;
+    height: 100px;
+    /* margin: 0 auto; */
+    transform: translate(-50%, -50%);
+    animation: float 3s ease-in-out infinite;
+    
+  }
+
+  .font-logo-input{
+    color : white;
+    font-size: 30px;
+    margin-top: 40px;
+  }
+
+  .card-header{
+    background-color: #413543;
+    border-radius: 10px;
+  }
+
+  #button-signin{
+    width :100%;
+    background-color: #8F43EE;
+  }
+
+  #button-link{
+    font-size: 18px;
+    position: relative;
+    bottom : 3px;
+    color: #413543;
+  }
+
+  #button-link:hover{
+    opacity: 0.6;
+  }
+
+  
+#button-signin:active {
+    transform: scale(0.95);
+  }
+  
+  
+  
+
+
+
+   @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+}
