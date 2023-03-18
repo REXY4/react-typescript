@@ -5,8 +5,8 @@ import { Api } from "./config/api";
 import { UserContext } from "./context/userContext";
 import definition from "./routes";
 import PrivateRoute from "./routes/PrivateRoute";
-import PublicRoute from "./routes/PublicRoute";
 import Detail from "./views/DetailView";
+import ErrorPage from "./views/Error";
 import Home from "./views/HomeView";
 import MainView from "./views/MainView";
 
@@ -41,11 +41,14 @@ function App(): JSX.Element {
       {localStorage.token && <Navbars />}
       <BrowserRouter>
         <Routes>
+          {/* private */}
         <Route  path='/' element={<PrivateRoute/>}>
-            <Route path="/home" element={<Home/>}/>
-            <Route path="/detail" element={<Detail/>}/>
+            {definition.filter(fil=>fil.private === true).map((item)=>
+            <Route path={item.path} element={item.element}/>)}
         </Route>
-        <Route path="/login" element={<MainView/>} />
+        {/* public  */}
+        {definition.filter(fil=>fil.private ===  false).map((item)=><Route path={item.path} element={item.element}/>)}
+        <Route path="*" element={<ErrorPage/>} />
         </Routes>
       </BrowserRouter>
     </>

@@ -12,7 +12,7 @@ interface Definition {
 
 const definition: Definition[] = [
   {
-    path: '/',
+    path: '/login',
     private : false,
     element: <MainView />,
   },
